@@ -185,12 +185,13 @@ int account:: update(){
     return 1;
 }
 int account::change_pin(){
-    string p, pn, pc;
+    string p;
     cout<<"ENTER THE OLD PIN";
     cin>>p;
     int count=0;
     while(count!=3){
         if (p==pin){
+            string pn, pc;
             cout<<"ENTER YOUR NEW 4-DIGIT PIN : "<<endl;
             cin>>pn;
             cout<<"CONFIRM PIN : "<<endl;
@@ -200,10 +201,13 @@ int account::change_pin(){
             }
             else{
                 cout<<"PIN DOESN'T MATCH!!! \nTRY AGAIN!!!";
-                count++;
-                if(count==2) cout<<"Last attempt!!!"<<endl;
             }
         }   
+        else{
+            cout<<"PIN DOESN'T MATCH!!! \nTRY AGAIN!!!";
+            count++;
+            if(count==2) cout<<"Last attempt!!!"<<endl;
+        }
     } 
     if(count==3) return 0;
     return 1;
