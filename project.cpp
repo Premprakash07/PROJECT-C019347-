@@ -93,16 +93,17 @@ class account:public dob{
 };
 
 int account::withdrawal(){ 
-    float w; 
-    string p;                     
+    float w;                     
     cout<<"Enter the withdrawal amount : ";
     cin>>w;
     cout<<endl;
-    cout<<"Enter PIN : ";
-    cin>>p;
-    cout<<endl;
+    
     int count=0;
     while(count!=3){
+        string p; 
+        cout<<"Enter PIN : ";
+        cin>>p;
+        cout<<endl;
         if(p==pin){                               
         bal=bal-w;
         balance=bal;
@@ -129,12 +130,13 @@ void account::deposit(){
     cout<<"Balance : "<<bal<<endl;
 }
 int account:: update(){
-    string p;
-    cout<<"Enter PIN : ";
-    cin>>p;
-    cout<<endl;
+    
     int count=0;
     while(count!=3){
+        string p;
+        cout<<"Enter PIN : ";
+        cin>>p;
+        cout<<endl;
         if(p==pin){                               
             break;
         }    
@@ -185,11 +187,12 @@ int account:: update(){
     return 1;
 }
 int account::change_pin(){
-    string p;
-    cout<<"ENTER THE OLD PIN";
-    cin>>p;
+    
     int count=0;
     while(count!=3){
+        string p;
+        cout<<"ENTER THE OLD PIN";
+        cin>>p;
         if (p==pin){
             string pn, pc;
             cout<<"ENTER YOUR NEW 4-DIGIT PIN : "<<endl;
