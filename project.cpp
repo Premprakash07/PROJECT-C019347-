@@ -21,7 +21,7 @@ class dob{
 };
 
 class account:public dob{
-    char name[30], fathers_name[30], mothers_name[30], gen, address[100];
+    string name, fathers_name, mothers_name, gen, address;
     string pin;
     float bal=0;     
     public:
@@ -38,7 +38,7 @@ class account:public dob{
     }
     int get_data(){
         cout<<"Enter name of the account holder : ";
-        cin.getline(name, sizeof(name));
+        getline(cin, name);
         cout<<endl;
         cout<<"Enter gender (M/F/T) : ";
         cin>>gen;
@@ -47,13 +47,13 @@ class account:public dob{
         get_dob();
         cout<<endl;
         cout<<"Enter Father's name of the account holder : ";
-        cin.getline(fathers_name, sizeof(fathers_name));
+        getline(cin, fathers_name);
         cout<<endl;
         cout<<"Enter Mother's name of the account holder : ";
-        cin.getline(mothers_name, sizeof(mothers_name));
+        getline(cin, mothers_name);
         cout<<endl;
         cout<<"Enter Address of the account holder : ";
-        cin.getline(address, sizeof(address));
+        cin>>address;
         cout<<endl;
         int count=0;
         while(count!=3){
@@ -158,17 +158,17 @@ int account:: update(){
     {
     case 1:{
         cout<<"ENTER THE NAME : "<<endl;
-        cin.getline(name, sizeof(name));
+        getline(cin, name);
         break;
     }
     case 2:{
-        cout<<"ENTER THE FATHHER'S NAME : "<<endl;
-        cin.getline(fathers_name, sizeof(fathers_name));
+        cout<<"ENTER THE FATHER'S NAME : "<<endl;
+        getline(cin, fathers_name);
         break;
     }
     case 3:{
         cout<<"ENTER THE MOTHER'S NAME : "<<endl;
-        cin.getline(mothers_name, sizeof(mothers_name));
+        getline(cin, mothers_name);
         break;
     }
     case 4:{
@@ -177,7 +177,7 @@ int account:: update(){
     }
     case 5:{
         cout<<"ENTER THE ADDRESS : "<<endl;
-        cin.getline(address, sizeof(address));
+        getline(cin, address);
         break;
     }
     
