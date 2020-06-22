@@ -34,7 +34,7 @@ class account:public dob{
     void display(){
         cout<<"ACCOUNT NO. : "<<account_no<<endl<<
         "NAME : "<<name<<endl<<
-        "BALANCED : "<<bal<<endl;
+        "BALANCED : "<<bal<<endl<<;
     }
     int get_data(){
         cout<<"Enter name of the account holder : ";
